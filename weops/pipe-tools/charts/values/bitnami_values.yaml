@@ -1,0 +1,32 @@
+commonLabels:
+  object: mongodb
+
+controller:
+  persistence:
+    enabled: false
+  nodeSelector:
+    node-role: worker
+  resources:
+    limits:
+      cpu: 500m
+      memory: 500Mi
+
+
+broker:
+  persistence:
+    enabled: false
+  nodeSelector:
+    node-role: worker
+  resources:
+    limits:
+      cpu: 500m
+      memory: 500Mi
+
+externalAccess:
+  enabled: true
+  controller:
+    service:
+      type: NodePort
+
+
+
